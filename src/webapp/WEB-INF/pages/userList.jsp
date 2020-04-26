@@ -16,11 +16,12 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
     <title>All Users</title>
 </head>
 <body>
+<a href="/logout">Logout</a>
 <center>
     <h1>
-        <a href="/addUser">Add New User</a>
+        <a href="/admin/addUser">Add New User</a>
         &nbsp;&nbsp;&nbsp;
-        <a href="/userList">Users List</a>
+        <a href="/admin/userList">Users List</a>
     </h1>
 </center>
 <div align="center">
@@ -28,20 +29,24 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
         <tr>
             <th>ID</th>
             <th>Name</th>
+            <th>Password</th>
             <th>Surname</th>
             <th>E-mail</th>
+            <th>Role</th>
             <th>Action</th>
         </tr>
         <c:forEach items="${list}" var="user">
             <tr>
                 <td>${user.id}</td>
                 <td>${user.name}</td>
+                <td>${user.password}</td>
                 <td>${user.surName}</td>
                 <td>${user.email}</td>
+                <td><c:forEach var="role" items="${user.roles}">${role.name}<br> </c:forEach></td>
                 <td>
-                    <a href="/updateUser?id=${user.id}">Update</a>
+                    <a href="/admin/updateUser?id=${user.id}">Update</a>
                     &nbsp;&nbsp;&nbsp;
-                    <a href="/deleteUser?id=${user.id}">Delete</a>
+                    <a href="/admin/deleteUser?id=${user.id}">Delete</a>
                 </td>
             </tr>
         </c:forEach>

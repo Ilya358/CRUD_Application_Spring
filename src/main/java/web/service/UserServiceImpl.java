@@ -5,13 +5,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import web.dao.UserDao;
+import web.model.Role;
 import web.model.User;
 
+import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 @ToString
-public class UserServiceImplement implements UserService {
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserDao userDao;
@@ -22,10 +27,21 @@ public class UserServiceImplement implements UserService {
         userDao.add(user);
     }
 
+    @PostConstruct
+    public void postConstruct() {
+        userDao.init();
+    }
+
     @Transactional
     @Override
     public User getUserById(Long id) {
         return userDao.getUserById(id);
+    }
+
+    @Transactional
+    @Override
+    public User getUserByName(String name) {
+        return userDao.getUserByName(name);
     }
 
     @Transactional(readOnly = true)
@@ -45,4 +61,5 @@ public class UserServiceImplement implements UserService {
     public void deleteUser(Long id) {
         userDao.deleteUser(id);
     }
+
 }

@@ -14,11 +14,12 @@
     <title>Update User</title>
 </head>
 <body>
+<a href="/logout">Logout</a>
 <center>
     <h1>
-        <a href="/addUser">Add New User</a>
+        <a href="/admin/addUser">Add New User</a>
         &nbsp;&nbsp;&nbsp;
-        <a href="/userList">Users List</a>
+        <a href="/admin/userList">Users List</a>
     </h1>
 </center>
 <div align="center">
@@ -36,12 +37,23 @@
                 <td><form:input path="name" /></td>
             </tr>
             <tr>
+                <th>Password: </th>
+                <td><form:input path="password" /></td>
+            </tr>
+            <tr>
                 <th>Surname: </th>
                 <td><form:input path="surName" /></td>
             </tr>
             <tr>
                 <th>E-mail: </th>
                 <td><form:input path="email" /></td>
+            </tr>
+            <tr>
+                <td>Role: </td>
+                <td>
+                    <input  type="checkbox" name="role" value="ROLE_ADMIN" > Admin
+                    <input  type="checkbox" name="role" value="ROLE_USER"> User
+                </td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" value="Save"></td>
