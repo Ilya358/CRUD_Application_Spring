@@ -9,65 +9,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ca223d7-6bbc-4f8b-9720-c1e8bf7e2c15" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_acl_5_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_taglibs_5_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/dao/RoleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/dao/RoleDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/security/LoginSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/security/SpringSecurityInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/service/MyUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/service/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/service/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/registration.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring_mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_mvc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/AppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/AppInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/dao/UserDaoImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/dao/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/addUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/updateUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/updateUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/userList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/userList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/config/AppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/config/AppInit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/dao/UserDaoImplement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/classes/web/service/UserServiceImplement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/pages/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/pages/addUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/pages/updateUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/pages/updateUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/pages/userList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_MVC/WEB-INF/pages/userList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/config/AppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/config/AppInit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/dao/UserDaoImplement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserServiceImplement.class" beforeDir="false" />
-    </list>
+    <list default="true" id="6ca223d7-6bbc-4f8b-9720-c1e8bf7e2c15" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -352,7 +294,7 @@
       <workItem from="1587640162373" duration="32233000" />
       <workItem from="1587717160346" duration="17453000" />
       <workItem from="1587763017478" duration="10684000" />
-      <workItem from="1587901915907" duration="12246000" />
+      <workItem from="1587901915907" duration="12593000" />
     </task>
     <servers />
   </component>
