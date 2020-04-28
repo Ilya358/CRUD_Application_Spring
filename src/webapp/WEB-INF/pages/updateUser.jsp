@@ -8,6 +8,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -34,26 +36,31 @@
             </tr>
             <tr>
                 <th>Name: </th>
-                <td><form:input path="name" /></td>
+                <td>${user.name}
+                    <form:input path="name" /></td>
             </tr>
             <tr>
                 <th>Password: </th>
-                <td><form:input path="password" /></td>
+                <td>${user.password}
+                    <form:input path="password" /></td>
             </tr>
             <tr>
                 <th>Surname: </th>
-                <td><form:input path="surName" /></td>
+                <td>${user.surName}
+                    <form:input path="surName" /></td>
             </tr>
             <tr>
                 <th>E-mail: </th>
-                <td><form:input path="email" /></td>
+                <td>${user.email}
+                    <form:input path="email" /></td>
             </tr>
             <tr>
                 <td>Role: </td>
-                <td>
-                    <input  type="checkbox" name="role" value="ROLE_ADMIN" > Admin
-                    <input  type="checkbox" name="role" value="ROLE_USER"> User
-                </td>
+                <td><label><select name="role" multiple>
+                    <c:forEach var="role" items="${roleList}">
+                        <option value="${role.id}">${role.name}</option>
+                    </c:forEach>
+                </select></label><br></td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" value="Save"></td>

@@ -4,10 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Set;
 
 @Getter
@@ -24,7 +22,7 @@ public class Role implements GrantedAuthority {
     @Column(name = "name")
     private String name;
 
-    @ManyToMany(mappedBy = "roles")
+    @ManyToMany(mappedBy = "roles", fetch = FetchType.EAGER)
     Set<User> users;
 
     @Override

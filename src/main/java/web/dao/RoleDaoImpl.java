@@ -1,12 +1,10 @@
 package web.dao;
 
 import lombok.ToString;
-import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import web.model.Role;
-import web.model.User;
 
 import java.util.List;
 
@@ -37,5 +35,9 @@ public class RoleDaoImpl implements RoleDao {
 //        query.setParameter("name", name);
 //        role = (Role) query.getSingleResult();
 //        return role;
+    }
+    public List<Role> getRoleList() {
+        List<Role> roleList = sessionFactory.getCurrentSession().createQuery("from Role").getResultList();
+        return roleList;
     }
 }

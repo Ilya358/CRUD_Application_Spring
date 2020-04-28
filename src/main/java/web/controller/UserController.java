@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 import web.model.Role;
 import web.model.User;
 import web.service.RoleService;
@@ -47,22 +46,20 @@ public class UserController {
     }
 
     @GetMapping("admin/addUser")
-    public String getAddUser(Map<String, Object> model) {
+    public String getAddUser(Map<String, Object> model, ModelMap modelMap) {
         User user = new User();
         model.put("user", user);
+        modelMap.addAttribute("roleList", roleService.roleList());
         return "addUser";
     }
 
     @PostMapping("admin/submit")
-    public String postAddUser(@ModelAttribute("user") User user, String role) {
-        String[] rolesArray;
-        rolesArray = role.split(",");
-        Set<Role> roles = new HashSet<>();
-        for (String elem : rolesArray) {
-            Role userRole = roleService.getRoleByName(elem);
-            roles.add(userRole);
+    public String postAddUser(@ModelAttribute("user") User user, @RequestParam ArrayList<String> role) {
+        Set<Role> roleSet = new HashSet<>();
+        for (String roleId : role) {
+            roleSet.add(roleService.getById(Long.valueOf(roleId)));
         }
-        user.setRoles(roles);
+        user.setRoles(roleSet);
         userService.add(user);
         return "redirect:/admin/userList";
     }
@@ -73,19 +70,11 @@ public class UserController {
         rolesArray = role.split(",");
         Set<Role> roles = new HashSet<>();
         for (String elem : rolesArray) {
-            Role userRole = roleService.getRoleByName(elem);
-            roles.add(userRole);
+            roles.add(roleService.getRoleByName(elem));
         }
         user.setRoles(roles);
         userService.add(user);
         return "redirect:/login";
-    }
-
-    @RequestMapping("admin/updateUser")
-    public String updateUser(@RequestParam long id, ModelMap model) {
-        User user = userService.getUserById(id);
-        model.addAttribute("user", user);
-        return "updateUser";
     }
 
     @RequestMapping("admin/deleteUser")
@@ -94,16 +83,21 @@ public class UserController {
         return "redirect:/admin/userList";
     }
 
+    @RequestMapping("admin/updateUser")
+    public String updateUser(@RequestParam long id, ModelMap modelMap) {
+        User user = userService.getUserById(id);
+        modelMap.addAttribute("roleList", roleService.roleList());
+        modelMap.addAttribute("user", user);
+        return "updateUser";
+    }
+
     @PostMapping("admin/save")
-    public String saveUser(@ModelAttribute("user") User user, String role) {
-        String[] rolesArray;
-        rolesArray = role.split(",");
-        Set<Role> roles = new HashSet<>();
-        for (String elem : rolesArray) {
-            Role userRole = roleService.getRoleByName(elem);
-            roles.add(userRole);
+    public String saveUser(@ModelAttribute("user") User user, @RequestParam ArrayList<String> role) {
+        Set<Role> roleSet = new HashSet<>();
+        for (String roleId : role) {
+            roleSet.add(roleService.getById(Long.valueOf(roleId)));
         }
-        user.setRoles(roles);
+        user.setRoles(roleSet);
         userService.updateUser(user);
         return "redirect:/admin/userList";
     }

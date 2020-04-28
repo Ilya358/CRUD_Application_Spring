@@ -8,6 +8,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -45,10 +47,11 @@
             </tr>
             <tr>
                 <td>Role: </td>
-                <td>
-                    <input  type="checkbox" name="role" value="ROLE_ADMIN" > Admin
-                    <input  type="checkbox" name="role" value="ROLE_USER"> User
-                </td>
+                <td><label><select name="role" multiple>
+                    <c:forEach var="role" items="${roleList}">
+                        <option value="${role.id}">${role.name}</option>
+                    </c:forEach>
+                </select></label><br></td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" value="Submit"></td>
